@@ -1,15 +1,21 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 
-import {fetchPosts} from 'api';
+import PostList from 'containers/post-list';
+import {actions as postActions} from 'store/data/posts';
 
-fetchPosts().then(console.log)
+const {fetchPosts} = postActions;
 
 class Home extends Component {
+    componentWillMount() {
+        this.props.dispatch(fetchPosts())
+    }
     render() {
         return (
-            <h1 className="page-header container text-center">React Learning Project!</h1>
+            <PostList />
         )
     }
 }
 
-export default Home;
+// connect to component to access props.dispatch
+export default connect((state) => ({}))(Home);
