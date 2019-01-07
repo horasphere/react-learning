@@ -55,8 +55,9 @@
     "jquery": "^3.2.1",
     "json-server": "^0.9.6",
     "lodash": "^4.17.4",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-router": "^3.0.2",
     "rsvp": "^3.5.0"
   },
